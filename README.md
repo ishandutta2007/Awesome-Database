@@ -1,255 +1,129 @@
 # Awesome-Database
 
-# 顶级数据库平台生态系统
+## Top Database Platforms Ecosystem
 
+**Curated List of SaaS Products & Open-Source GitHub Projects**
+*Focused on Cloud-Native Databases, Distributed SQL, Serverless Postgres & Database Branching*
+**Last updated: October 2026**
 
+This repository tracks notable **SaaS platforms** and **open-source projects** for **Databases**. These tools help developers run production-grade databases in managed or self-hosted environments, spanning relational, document, distributed SQL, and HTAP workloads.
 
-**精选 SaaS 产品与开源 GitHub 项目列表**
+**Examples** include MongoDB Atlas, PlanetScale, Neon, Supabase, CockroachDB, YugabyteDB, Amazon RDS, Azure SQL Database, Google Cloud SQL, and TiDB Cloud (the category leaders).
 
-*聚焦云原生数据库、分布式 SQL、无服务器 Postgres 与数据库分支*
+**Open-source emphasis**: The database ecosystem is **exceptionally mature in open source**. **PostgreSQL** is widely regarded as the most powerful open-source relational database, with over 35 years of active development . **TiDB** is a MySQL-compatible distributed HTAP database, fully open source under Apache 2.0, with over 34K GitHub stars . **CockroachDB** and **YugabyteDB** are both inspired by Google's Spanner paper, using Raft consensus and RocksDB storage engines . **Neon** is an open-source serverless Postgres alternative to AWS Aurora Postgres, separating storage from compute . **Supabase** provides an Apache 2.0 open-source Firebase alternative . This section documents these production-grade solutions.
 
-**最后更新：2026 年 10 月**
+Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
 
+## Table of Contents
 
+- [SaaS/Hosted Platforms](#saas-hosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer](#disclaimer)
 
-本仓库追踪 **数据库** 领域的知名 **SaaS 平台** 与 **开源项目**。这些工具帮助开发者以托管或自托管方式运行生产级数据库，涵盖关系型、文档型、分布式 SQL 和 HTAP 工作负载。
-
-
-
-**示例** 包括 MongoDB Atlas、PlanetScale、Neon、Supabase、CockroachDB、YugabyteDB、Amazon RDS、Azure SQL Database、Google Cloud SQL 和 TiDB Cloud（该领域的领先者）。
-
-
-
-**开源重点**：数据库领域的开源生态 **极其成熟**。**PostgreSQL** 是公认最强大的开源关系型数据库，拥有 35 年活跃开发历史 。**TiDB** 是 MySQL 兼容的分布式 HTAP 数据库，完全开源（Apache 2.0），GitHub 星标超过 34K 。**CockroachDB** 和 **YugabyteDB** 均受 Google Spanner 论文启发，采用 Raft 共识和 RocksDB 存储引擎 。**Neon** 是 AWS Aurora Postgres 的无服务器开源替代方案，将存储与计算分离 。**Supabase** 以 Apache 2.0 许可提供开源 Firebase 替代方案 。本列表重点收录这些生产级方案。
-
-
-
-欢迎贡献！提交 PR 以添加/更新条目。保持描述事实性，并链接到官方网站。
-
-
-
-## 目录
-
-
-
-- [SaaS/托管平台](#saas托管平台)
-
-- [开源 GitHub 项目](#开源github项目)
-
-- [如何贡献](#如何贡献)
-
-- [免责声明](#免责声明)
-
-
-
-## SaaS/托管平台
-
-
+## SaaS/Hosted Platforms
 
 - **[MongoDB Atlas](https://www.mongodb.com/atlas)**
-
-  全球领先的托管文档数据库。提供多区域集群、自动分片、全文搜索和向量搜索能力。用户评价其"托管多区域架构、内置分片和运维简洁性"使公司能够处理大规模全球分布式事务工作负载，同时"显著降低了运维开销" 。适合需要灵活 schema 和文档模型的现代应用。
-
-
+  The leading managed document database. Provides multi-region clusters, automatic sharding, full-text search, and vector search. Users report that its "managed multi-region architecture, built-in sharding, and operational simplicity" let companies handle large-scale globally distributed transactional workloads while "significantly reducing operational overhead" . Best for modern applications needing flexible schemas and document models.
 
 - **[PlanetScale](https://planetscale.com/)**
-
-  **基于 Vitess 的 MySQL 无服务器分支平台。** 核心卖点是 **Branching、Schema 迁移无锁和无服务器** 。产品类型为 **MySQL 无服务器分支平台**，技术基座为 **Vitess + YouTube MySQL 分片经验** 。提供 Schema 迁移无锁能力，开发者可像 Git 分支一样管理数据库。**注意**：PlanetScale 平台本身**闭源**，仅 Vitess 开源；无法自行托管，迁移成本需纳入考量 。适合追求快速迭代的中小型项目 。
-
-
+  **Serverless MySQL branching platform built on Vitess.** Core value proposition is **Branching, non-blocking schema migrations, and serverless** . Product type: **MySQL serverless branching platform**, with a **Vitess + YouTube MySQL sharding** technology foundation. Provides non-blocking schema migrations, letting developers manage databases like Git branches. **Note**: The PlanetScale platform itself is **closed source**—only Vitess is open source. It cannot be self-hosted, so migration cost should be factored in . Best for small and mid-sized projects seeking rapid iteration .
 
 - **[Neon](https://neon.com/)**
-
-  **无服务器 Postgres 平台，AWS Aurora Postgres 的开源替代方案。** 架构核心是 **存储与计算分离**，通过在节点集群之间重新分配数据来替代 PostgreSQL 存储层 。提供 **自动扩缩、分支和无限存储** 。免费层慷慨，适合开发测试和中小规模生产。
-
-
+  **Serverless Postgres platform and open-source alternative to AWS Aurora Postgres.** Core architecture is **separation of storage and compute**, replacing PostgreSQL's storage layer by redistributing data across a cluster of nodes . Provides **autoscaling, branching, and unlimited storage**. Generous free tier, suited for development, testing, and small-to-medium production.
 
 - **[Supabase](https://supabase.com/)**
-
-  **开源 Firebase 替代方案，以 Apache 2.0 许可提供。** 在 Postgres 之上添加实时和 RESTful API，无需编写代码 。自托管或托管均可。功能包括 **认证与授权、自动生成 REST 和 GraphQL API、实时订阅、边缘函数、文件存储和 AI/向量工具包** 。技术栈基于 Postgres、Realtime（Elixir/WebSocket）、PostgREST、GoTrue、Storage、pg_graphql、postgres-meta 和 Kong 。
-
-
+  **Open-source Firebase alternative, available under Apache 2.0.** Adds realtime and RESTful APIs on top of Postgres, with no code required . Self-hosted or managed. Features include **authentication and authorization, auto-generated REST and GraphQL APIs, realtime subscriptions, edge functions, file storage, and AI/vector toolkit**. Stack: Postgres, Realtime (Elixir/WebSocket), PostgREST, GoTrue, Storage, pg_graphql, postgres-meta, and Kong .
 
 - **[CockroachDB](https://www.cockroachlabs.com/)**
-
-  **云原生分布式 SQL 数据库，专为现代云应用设计。** 与 PostgreSQL **wire 兼容**，底层为 Key-Value 存储（RocksDB 或自研 Pebble） 。与 YugabyteDB 类似，受 Google Spanner 论文启发，采用 **Raft 共识和 RocksDB 存储引擎** 。**Apache 2.0 开源**，商业许可可用 。适合需要高可用性和 effortless scale 的全球分布式应用 。
-
-
+  **Cloud-native distributed SQL database designed for modern cloud applications.** **PostgreSQL wire compatible**, with a Key-Value store underneath (RocksDB or its own Pebble) . Like YugabyteDB, it is inspired by Google's Spanner paper, using **Raft consensus and RocksDB storage engine** . **Apache 2.0 open source**, with commercial licensing available . Best for globally distributed applications needing high availability and effortless scale .
 
 - **[YugabyteDB](https://www.yugabyte.com/)**
-
-  **云原生分布式 SQL 数据库，用于任务关键型应用。** 与 CockroachDB 架构相似，同受 Spanner 启发，采用 Raft 共识和 RocksDB 存储 。**优势**：在大数据量下 **更高性能、更好的 PostgreSQL 兼容性、更灵活的地理分布式部署选项和更高的数据密度** 。**Apache 2.0 开源** 。适合需要 Spanner 级一致性但希望自托管或使用开源方案的团队。
-
-
+  **Cloud-native distributed SQL database for mission-critical applications.** Architecturally similar to CockroachDB, both inspired by Spanner, using Raft consensus and RocksDB storage . **Advantages**: **higher performance at large data volumes, better PostgreSQL compatibility, more flexible geo-distributed deployment options, and higher data density** . **Apache 2.0 open source** . Best for teams wanting Spanner-level consistency while self-hosting or using an open-source option.
 
 - **[Amazon RDS](https://aws.amazon.com/rds/)**
-
-  AWS 托管关系型数据库服务。支持 PostgreSQL、MySQL、MariaDB、Oracle、SQL Server 和 Db2。提供自动备份、多可用区部署和读副本。
-
-
+  AWS managed relational database service. Supports PostgreSQL, MySQL, MariaDB, Oracle, SQL Server, and Db2. Provides automated backups, Multi-AZ deployment, and read replicas.
 
 - **[Azure SQL Database](https://azure.microsoft.com/en-us/products/azure-sql/database/)**
-
-  Azure 托管 SQL Server 服务。提供智能性能调优、自动备份和内置高可用性。与 Microsoft 生态深度集成。
-
-
+  Azure managed SQL Server service. Provides intelligent performance tuning, automated backups, and built-in high availability. Deep integration with the Microsoft ecosystem.
 
 - **[Google Cloud SQL](https://cloud.google.com/sql)**
-
-  Google Cloud 托管关系型数据库服务。支持 PostgreSQL、MySQL 和 SQL Server。提供自动备份、故障转移和读副本。
-
-
+  Google Cloud managed relational database service. Supports PostgreSQL, MySQL, and SQL Server. Provides automated backups, failover, and read replicas.
 
 - **[TiDB Cloud](https://www.pingcap.com/tidb-cloud/)**
+  **Fully managed DBaaS for TiDB.** Offers **Serverless (billed by request volume via RCU)** and **Dedicated (billed by resource specification)** modes . **TiDB is a MySQL-compatible distributed HTAP database** supporting horizontal scaling, strong consistency, and high availability . **Fully open source (Apache 2.0)**, self-hostable or managed . **TiDB Cloud can reduce daily operational workload by approximately 85%** compared to self-managing a 12-node cluster .
 
-  **TiDB 的完全托管 DBaaS 服务。** 提供 **Serverless（按请求量 RCU 计费）** 和 **Dedicated（按资源规格计费）** 两种模式 。**TiDB 是 MySQL 兼容的分布式 HTAP 数据库**，支持水平扩展、强一致性和高可用 。**完全开源（Apache 2.0）**，可自托管或使用托管服务 。**TiDB Cloud 可减少约 85% 的日常运维工作量**（相比自建 12 节点集群） 。
+## Open-Source GitHub Projects
 
-
-
-## 开源 GitHub 项目
-
-
-
-### 关系型数据库
-
-
+### Relational Databases
 
 - **[PostgreSQL](https://github.com/postgres/postgres)**
-
-  **世界上最先进的开源关系型数据库。** 拥有 **超过 35 年活跃开发历史**，以可靠性、功能健壮性和性能著称 。**BSD 许可**。支持 ACID 事务、复杂查询、外键、触发器和存储过程。生态极其丰富（PostGIS、TimescaleDB、pgvector 等扩展）。**适用于绝大多数应用场景**，从小型项目到大规模生产。
-
-
+  **The world's most advanced open-source relational database.** With **over 35 years of active development**, it is known for reliability, feature robustness, and performance . **BSD licensed**. Supports ACID transactions, complex queries, foreign keys, triggers, and stored procedures. An exceptionally rich ecosystem (PostGIS, TimescaleDB, pgvector, and more). **Suitable for the vast majority of applications**, from small projects to large-scale production.
 
 - **[MySQL Community Edition](https://github.com/mysql/mysql-server)**
-
-  **世界上最流行的开源数据库。** 拥有 **活跃的开源开发者社区** 。**GPL 许可**。MySQL 兼容生态广泛，PlanetScale 和 TiDB 均基于或兼容 MySQL 协议。适合 Web 应用和传统 LAMP 栈。
-
-
+  **The world's most popular open-source database.** Has an **active open-source developer community** . **GPL licensed**. The MySQL-compatible ecosystem is broad—both PlanetScale and TiDB are built on or compatible with the MySQL protocol. Suited for web applications and traditional LAMP stacks.
 
 - **[MariaDB](https://github.com/MariaDB/server)**
+  **A backward-compatible alternative to MySQL.** Contains all major open-source storage engines . **GPL-2.0 licensed**. Created by MySQL's original developers, maintaining an open-source commitment. Suited for teams wanting to migrate from MySQL while avoiding Oracle licensing concerns.
 
-  **MySQL 的向后兼容替代品。** 包含所有主要开源存储引擎 。**GPL-2.0 许可**。由 MySQL 原始开发者创建，保持开源承诺。适合希望从 MySQL 迁移但避免 Oracle 许可顾虑的团队。
-
-
-
-### 分布式 SQL 与 HTAP
-
-
+### Distributed SQL & HTAP
 
 - **[TiDB](https://github.com/pingcap/tidb)**
-
-  **开源分布式 HTAP 数据库，MySQL 兼容。** **Apache 2.0 许可** 。**34K+ GitHub 星标、5K+ 社区 Slack 成员、1K+ 社区贡献者** 。支持 **水平扩展、强一致性和高可用性**。采用 **Range 分片自动分裂与合并**，适合数据分布不确定或变化较大的场景 。**HTAP 能力** 同时支持事务和分析查询（含 TiFlash 列存引擎）。**可自托管或使用 TiDB Cloud** 。适合需要同时处理 OLTP 和 OLAP 工作负载的应用 。
-
-
+  **Open-source distributed HTAP database, MySQL compatible.** **Apache 2.0 licensed** . **34K+ GitHub stars, 5K+ community Slack members, 1K+ community contributors** . Supports **horizontal scaling, strong consistency, and high availability**. Uses **Range sharding with automatic split and merge**, suited for scenarios where data distribution is uncertain or changing . **HTAP capability** supports both transactional and analytical queries simultaneously (including the TiFlash columnar engine). **Self-hostable or available via TiDB Cloud** . Suited for applications needing to handle both OLTP and OLAP workloads .
 
 - **[CockroachDB](https://github.com/cockroachdb/cockroach)**
-
-  **云原生分布式 SQL 数据库。** **Apache 2.0 许可**（商业许可可用） 。与 PostgreSQL wire 兼容，底层为 RocksDB/Pebble 。采用 Raft 共识，受 Spanner 论文启发 。**适合需要 99.999% 可用性（每年约 5 分钟停机）的任务关键型应用** 。
-
-
+  **Cloud-native distributed SQL database.** **Apache 2.0 licensed** (commercial licensing available) . PostgreSQL wire compatible, with RocksDB/Pebble underneath . Uses Raft consensus, inspired by the Spanner paper . **Suited for mission-critical applications needing 99.999% availability** (roughly 5 minutes of downtime per year) .
 
 - **[YugabyteDB](https://github.com/yugabyte/yugabyte-db)**
+  **Cloud-native distributed SQL database for mission-critical applications.** **Apache 2.0 licensed** . Architecturally similar to CockroachDB (Spanner-inspired, Raft consensus, RocksDB storage) . **Advantages**: higher performance at large data volumes, better PostgreSQL compatibility, more flexible geo-distributed deployment, and higher data density . **Native support for explicit replica placement control** (satisfying GDPR/data residency requirements) .
 
-  **云原生分布式 SQL 数据库，用于任务关键型应用。** **Apache 2.0 许可** 。与 CockroachDB 架构相似（Spanner 启发、Raft 共识、RocksDB 存储） 。**优势**：大数据量下更高性能、更好 PostgreSQL 兼容性、更灵活地理分布式部署、更高数据密度 。**原生支持显式副本位置控制**（满足 GDPR/数据驻留要求） 。
-
-
-
-### 无服务器与 Postgres 平台
-
-
+### Serverless & Postgres Platforms
 
 - **[Neon](https://github.com/neondatabase/neon)**
-
-  **无服务器 Postgres，存储与计算分离。** 架构包括 **Compute 节点（无状态 PostgreSQL 节点）** 和 **存储引擎（Pageserver 可扩展存储后端 + Safekeepers 冗余 WAL 服务）** 。**开源**，AWS Aurora Postgres 的替代方案 。提供 **自动扩缩、分支和无限存储** 。可在本地构建（需 Rust、protobuf 等依赖）或使用托管服务 。
-
-
+  **Serverless Postgres with separated storage and compute.** Architecture includes **Compute nodes (stateless PostgreSQL nodes)** and a **storage engine (Pageserver scalable storage backend + Safekeepers redundant WAL service)** . **Open source**, an alternative to AWS Aurora Postgres . Provides **autoscaling, branching, and unlimited storage**. Can be built locally (requires Rust, protobuf, and other dependencies) or used as a managed service .
 
 - **[Supabase](https://github.com/supabase/supabase)**
+  **Open-source Firebase alternative.** **Apache 2.0 licensed** . Provides **auto-generated REST/GraphQL APIs, realtime subscriptions, authentication, storage, and edge functions** on top of Postgres . **Self-hosted or managed**. Stack: PostgreSQL, Realtime, PostgREST, GoTrue, Storage, pg_graphql, postgres-meta, Kong .
 
-  **开源 Firebase 替代方案。** **Apache 2.0 许可** 。在 Postgres 之上提供 **自动 REST/GraphQL API、实时订阅、认证、存储和边缘函数** 。**可自托管或托管**。技术栈：PostgreSQL、Realtime、PostgREST、GoTrue、Storage、pg_graphql、postgres-meta、Kong 。
-
-
-
-### 后端即服务（BaaS）替代方案
-
-
+### Backend-as-a-Service (BaaS) Alternatives
 
 - **[PocketBase](https://github.com/pocketbase/pocketbase)**
-
-  **单文件开源实时后端。** **MIT 许可** 。包含 SQLite 数据库、实时订阅、认证、文件存储和管理员 UI。极简部署，适合小型项目和快速原型。
-
-
+  **Single-file open-source realtime backend.** **MIT licensed** . Includes SQLite database, realtime subscriptions, authentication, file storage, and an admin UI. Minimal deployment, suited for small projects and rapid prototyping.
 
 - **[Appwrite](https://github.com/appwrite/appwrite)**
-
-  **安全开源后端服务器，面向 Web 和移动开发者。** **BSD-3-Clause 许可** 。提供 **REST API 管理核心后端需求**：认证、数据库、存储、函数和实时。Docker 部署。
-
-
+  **Secure open-source backend server for web and mobile developers.** **BSD-3-Clause licensed** . Provides **REST APIs to manage core backend needs**: authentication, databases, storage, functions, and realtime. Docker deployment.
 
 - **[Postbase](https://github.com/umrashrf/postbase)**
-
-  **Firebase 的即插即用开源替代品。** 使用 **Node.js、Express.js、BetterAuth 和 PostgreSQL（JSONB）** 构建 。**本地优先、自托管**。提供 **NoSQL 文档存储、集合、CRUD、安全规则、数据库迁移、文件上传和认证功能**（包括 Google/Facebook/Apple 登录、邮箱/手机验证） 。**GPL-3.0 许可**。**注意**：2025 年 11 月新发布，处于早期阶段，预期频繁变更 。
-
-
+  **Plug-and-play open-source alternative to Firebase.** Built with **Node.js, Express.js, BetterAuth, and PostgreSQL (JSONB)** . **Local-first, self-hosted**. Provides **NoSQL document store, collections, CRUD, security rules, database migrations, file uploads, and authentication** (including Google/Facebook/Apple login, email/phone verification) . **GPL-3.0 licensed**. **Note**: Newly released in November 2025, early stage—expect frequent changes .
 
 - **[Fluxend](https://github.com/fluxend/fluxend)**
+  **Self-hosted open-source Backend-as-a-Service built in Go.** **GPL-3.0 licensed** . Provides **instant REST APIs, authentication, file storage, forms, and audit logging** on your own PostgreSQL database . **Dynamic REST APIs** powered by PostgREST, with no code generation and no lock-in. Supports **multi-tenant organizations + RBAC, per-project JWT isolation, S3-compatible storage, and CSV/XLSX import into APIs** . **Single `docker compose up` deployment**.
 
-  **使用 Go 构建的自托管开源 Backend-as-a-Service。** **GPL-3.0 许可** 。在自有 PostgreSQL 数据库上提供 **即时 REST API、认证、文件存储、表单和审计日志** 。**动态 REST API** 由 PostgREST 支持，无代码生成、无锁定。支持 **多租户组织 + RBAC、每项目 JWT 隔离、S3 兼容存储、CSV/XLSX 导入到 API** 。**单条 `docker compose up` 部署**。
+### Additional Strong Open-Source Options
 
+- **Relational Databases**: **PostgreSQL** (35 years, BSD), **MySQL Community** (most popular, GPL), **MariaDB** (MySQL compatible, GPL-2.0) .
+- **Distributed SQL/HTAP**: **TiDB** (Apache 2.0, 34K+ stars, HTAP), **CockroachDB** (Apache 2.0, Spanner-inspired), **YugabyteDB** (Apache 2.0, better PG compatibility) .
+- **Serverless Postgres**: **Neon** (separated storage/compute, open source), **Supabase** (Apache 2.0, Firebase alternative) .
+- **BaaS Alternatives**: **PocketBase** (MIT, single file), **Appwrite** (BSD-3, Docker), **Postbase** (GPL-3, Firebase-compatible), **Fluxend** (GPL-3, Go/PostgREST) .
 
+**Frameworks for building custom systems**: Combine **PostgreSQL** as the core relational database, **TiDB** or **CockroachDB/YugabyteDB** for scenarios needing horizontal scaling and geo-distribution, **Neon** for serverless Postgres workloads, and **Supabase** or **Postbase/Fluxend** for rapidly building full-stack applications with authentication and APIs. Add **Redis** for caching, **Kafka** for event streaming, and **Docker/Kubernetes** for deployment.
 
-### 其他强开源选项
+## How to Contribute
 
+1. Fork the repo.
+2. Add/edit entries in `README.md` (follow existing format).
+3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
+4. Submit PR with a short explanation.
 
+Star the repo if you find it useful!
 
-- **关系型数据库**：**PostgreSQL**（35 年历史，BSD）、**MySQL Community**（最流行，GPL）、**MariaDB**（MySQL 兼容，GPL-2.0） 。
+## Disclaimer
 
-- **分布式 SQL/HTAP**：**TiDB**（Apache 2.0，34K+ 星标，HTAP）、**CockroachDB**（Apache 2.0，Spanner 启发）、**YugabyteDB**（Apache 2.0，更好 PG 兼容） 。
-
-- **无服务器 Postgres**：**Neon**（存储计算分离，开源）、**Supabase**（Apache 2.0，Firebase 替代） 。
-
-- **BaaS 替代**：**PocketBase**（MIT，单文件）、**Appwrite**（BSD-3，Docker）、**Postbase**（GPL-3，Firebase 兼容）、**Fluxend**（GPL-3，Go/PostgREST） 。
-
-
-
-**构建自定义系统的框架**：结合 **PostgreSQL** 作为核心关系型数据库，**TiDB** 或 **CockroachDB/YugabyteDB** 用于需要水平扩展和地理分布的场景，**Neon** 用于无服务器 Postgres 工作负载，**Supabase** 或 **Postbase/Fluxend** 用于快速构建带认证和 API 的全栈应用。添加 **Redis** 用于缓存，**Kafka** 用于事件流，**Docker/Kubernetes** 用于部署。
-
-
-
-## 如何贡献
-
-
-
-1. Fork 仓库。
-
-2. 在 `README.md` 中添加/编辑条目（遵循现有格式）。
-
-3. 包含：名称、链接、1–2 句描述，以及是 SaaS 还是开源。
-
-4. 提交 PR 并附简短说明。
-
-
-
-如果你觉得这个仓库有用，请点星！
-
-
-
-## 免责声明
-
-
-
-- 这是一个 **社区精选** 列表——并非详尽无遗，也不构成认可。
-
-- 数据库平台处理敏感生产数据；确保遵守 GDPR、CCPA、HIPAA 和相关数据保护法规。
-
-- **开源现实**：数据库领域的开源生态 **极其成熟且生产就绪**。**PostgreSQL** 是公认最强大的开源关系型数据库（35 年历史） 。**TiDB** 以 Apache 2.0 许可提供 MySQL 兼容的分布式 HTAP 能力，34K+ GitHub 星标 。**CockroachDB** 和 **YugabyteDB** 提供 Spanner 级分布式 SQL 。**Neon** 和 **Supabase** 提供无服务器 Postgres 和 Firebase 替代方案 。**PocketBase**、**Appwrite**、**Postbase** 和 **Fluxend** 提供轻量级 BaaS 方案 。**商业托管平台**（MongoDB Atlas、Amazon RDS、Azure SQL）在 **运维简洁性、多区域托管和 enterprise 支持** 方面提供优势，但开源方案在大多数场景下是 **真正可行的替代选择**，尤其是对于有工程能力的团队。
-
-
+- This is a **community-curated** list — not exhaustive and not an endorsement.
+- Database platforms handle sensitive production data; ensure compliance with GDPR, CCPA, HIPAA, and relevant data protection regulations.
+- **Open-source reality**: The database ecosystem is **exceptionally mature and production-ready in open source**. **PostgreSQL** is widely regarded as the most powerful open-source relational database (35 years of development) . **TiDB** provides MySQL-compatible distributed HTAP under Apache 2.0 with 34K+ GitHub stars . **CockroachDB** and **YugabyteDB** deliver Spanner-level distributed SQL . **Neon** and **Supabase** provide serverless Postgres and Firebase alternatives . **PocketBase**, **Appwrite**, **Postbase**, and **Fluxend** offer lightweight BaaS options . **Commercial managed platforms** (MongoDB Atlas, Amazon RDS, Azure SQL) offer advantages in **operational simplicity, multi-region hosting, and enterprise support**, but open-source options are **genuinely viable alternatives** in most scenarios, especially for teams with engineering capacity.
 
 ---
 
-
-
-**为数据库工程师、后端开发者、平台团队和 CTO 打造。**
-
-让数据库更开放、透明、可扩展。
+**Made for database engineers, backend developers, platform teams, and CTOs.**
+Let's make databases more open, transparent, and scalable.
